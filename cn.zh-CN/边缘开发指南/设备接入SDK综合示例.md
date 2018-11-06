@@ -158,7 +158,7 @@ class Temperature_device(lethingaccesssdk.ThingCallback):
     if input_value[0] == "temperature":
       return 0, {input_value[0]: self.LightSwitch}
     else:
-      return -1
+      return -1, {}
 
   def setProperties(self, input_value):
     if "temperature" in input_value:
