@@ -159,29 +159,20 @@ ExecStop=/linkedge/gateway/build/script/iot_gateway_stop.sh
 WantedBy=multi-user.target
 ```
 
-您可运行如下命令下载该service文件，并拷贝到/etc/systemd/system/目录。
+您可运行如下命令配置开机自启动功能。
 
 ```
 wget http://iotedge-web.oss-cn-shanghai.aliyuncs.com/public/testingTool/LinkIoTEdge.service
 sudo cp LinkIoTEdge.service /etc/systemd/system/LinkIoTEdge.service
+sudo systemctl enable LinkIoTEdge.service
 ```
 
-可以使用如下命令启动或者重启服务。
+其他常用命令。
 
 -   启动命令：`sudo systemctl start LinkIoTEdge.service`
 -   重启命令：`sudo systemctl restart LinkIoTEdge.service`
-
-可以使用如下命令停止服务。
-
-```
-sudo systemctl stop LinkIoTEdge.service
-```
-
-可以使用如下命令设置开机自动启动服务。
-
-```
-sudo systemctl enable LinkIoTEdge.service
-```
+-   停止命令：`sudo systemctl stop LinkIoTEdge.service`
+-   禁用开机自启动：`sudo systemctl disable LinkIoTEdge.service`
 
 ## 下一步 {#section_ufa_drh_uyh .section}
 
