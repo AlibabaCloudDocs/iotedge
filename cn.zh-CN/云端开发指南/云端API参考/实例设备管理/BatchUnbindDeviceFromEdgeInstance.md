@@ -17,7 +17,9 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|BatchUnbindDeviceFromEdgeInstance|系统规定参数。取值：BatchUnbindDeviceFromEdgeInstance。 |
-|InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。从物联网平台控制台的**边缘计算** \> **边缘实例**页面中获取。 |
+|InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在物联网平台控制台的**边缘计算** \> **边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
+
+ 您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
 |IotIds.N|RepeatList|是|BXPV9Ks3bxwM9fD\*\*\*\*0000101|设备ID列表。可调用[QueryDevice](~~69905~~)查询当前账号下所有设备信息，获取设备IotId。
 
  **说明：** 单次调用最多可移除20个设备。 |
