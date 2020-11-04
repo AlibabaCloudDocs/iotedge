@@ -6,7 +6,7 @@
 
 单阿里云账号调用该接口的每秒请求数（QPS）最大限制为10。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM账号共享主账号配额。
 
 ## 调试
 
@@ -18,7 +18,7 @@
 |--|--|----|---|--|
 |Action|String|是|QueryEdgeInstanceHistoricDeployment|系统规定参数。取值：QueryEdgeInstanceHistoricDeployment。 |
 |CurrentPage|Integer|是|1|从返回结果中的第几页开始显示。最小取值为1。 |
-|InstanceId|String|是|PgEfYupSn6Pvhfkx\*\*\*\*|边缘实例ID。在物联网平台控制台的**边缘计算** \> **边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
+|InstanceId|String|是|PgEfYupSn6Pvhfkx\*\*\*\*|边缘实例ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
 |PageSize|Integer|是|15|返回结果中每页显示的记录数量。最大取值30，最小取值1，默认取值是10。 |
