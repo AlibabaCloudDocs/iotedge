@@ -6,7 +6,7 @@
 
 单阿里云账号调用该接口的每秒请求数（QPS）最大限制为10。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM用户共享主账号配额。
 
 ## 调试
 
@@ -17,7 +17,7 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|CreateEdgeDriverVersion|系统规定参数。取值：CreateEdgeDriverVersion。 |
-|DriverId|String|是|fec565038d7544978d9aed5c1a\*\*\*\*\*\*|驱动ID。在物联网平台控制台的**边缘计算** \> **驱动管理**页面中，鼠标悬浮在目标驱动名称上获取ID。
+|DriverId|String|是|fec565038d7544978d9aed5c1a\*\*\*\*\*\*|驱动ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**驱动管理**页面中，鼠标悬浮在目标驱动名称上获取ID。
 
  您也可以调用[QueryEdgeDriver](~~155776~~)接口获取。 |
 |DriverVersion|String|是|1.2.0|驱动版本号。必须是该驱动唯一的版本号，即一个驱动不可以设置两个相同的版本号。允许中文、英文字母、数字、下划线（\_）、短划线（-）和英文句号（.），长度不超过64个字符。 |
@@ -44,7 +44,7 @@
 -   deviceConfig：表示边缘实例中该驱动下设备的配置校验规则。
 
  `required`为true表示参数不能为空；false表示参数允许为空。 |
-|ContainerConfig|String|否|\{"privileged":1,"devMappings":\[\],"volumeMappings":\[\],"hostNetworkMode":0,"portMappings":\[\]\}|容器配置。JSON格式字符串。详情请参见本文下方**ContainerConfig**表格。 |
+|ContainerConfig|String|否|\{"privileged":1,"devMappings":\[\],"volumeMappings":\[\],"hostNetworkMode":0,"portMappings":\[\]\}|容器配置。JSON格式字符串。更多信息，请参见本文下方**ContainerConfig**表格。 |
 
 调用API时，除了本文介绍的该API的特有请求参数，还需传入公共请求参数。公共请求参数说明，请参见[公共参数文档](~~135196~~)。
 
@@ -150,9 +150,7 @@
 
 |是
 
-|设备名称。需要以
-
-`/dev/`开头，长度为1~128个字符。 |
+|设备名称。需要以**/dev/**开头，长度为1~128个字符。 |
 |permission
 
 |String
@@ -195,9 +193,7 @@
 
 |是
 
-|目的路径。须填写绝对路径，不支持根目录，以
-
-`/`开头，长度为2~128个字符，不支持空格。 |
+|目的路径。须填写绝对路径，不支持根目录，以正斜杠（/）开头，长度为2~128个字符，不支持空格。 |
 |permission
 
 |String
