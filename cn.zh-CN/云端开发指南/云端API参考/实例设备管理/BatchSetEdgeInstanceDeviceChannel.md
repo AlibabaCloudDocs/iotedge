@@ -6,7 +6,7 @@
 
 单阿里云账号调用该接口的每秒请求数（QPS）最大限制为5。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM用户共享主账号配额。
 
 ## 调试
 
@@ -18,10 +18,10 @@
 |--|--|----|---|--|
 |Action|String|是|BatchSetEdgeInstanceDeviceChannel|系统规定参数。取值：BatchSetEdgeInstanceDeviceChannel。 |
 |ChannelId|String|是|BE0BD49EF5EF4D119D09CC1B25\*\*\*\*\*\*|驱动通道ID。调用[QueryEdgeInstanceChannel](~~162253~~)接口获取。 |
-|DriverId|String|是|9c1ae7bd59f1469abbdccc9592\*\*\*\*\*\*|驱动ID。在物联网平台控制台的**边缘计算** \> **驱动管理**页面中，鼠标悬浮在目标驱动名称上获取ID。
+|DriverId|String|是|9c1ae7bd59f1469abbdccc9592\*\*\*\*\*\*|驱动ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**驱动管理**页面中，鼠标悬浮在目标驱动名称上获取ID。
 
  您也可以调用[QueryEdgeDriver](~~155776~~)接口获取。 |
-|InstanceId|String|是|6GaTtvTj7vJhiS\*\*\*\*\*\*|边缘实例的ID。在物联网平台控制台的**边缘计算** \> **边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
+|InstanceId|String|是|6GaTtvTj7vJhiS\*\*\*\*\*\*|边缘实例的ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
 |IotIds.N|RepeatList|是|Hathoyxglj9jpYPyw3WN\*\*\*\*\*\*|子设备ID列表。可调用[QueryDevice](~~69905~~)接口查询子设备ID。
