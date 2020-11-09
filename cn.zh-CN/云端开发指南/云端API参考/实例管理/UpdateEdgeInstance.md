@@ -6,7 +6,7 @@
 
 单阿里云账号调用该接口的每秒请求数（QPS）最大限制为5。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM用户共享主账号配额。
 
 ## 调试
 
@@ -17,14 +17,14 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|UpdateEdgeInstance|系统规定参数。取值：UpdateEdgeInstance。 |
-|InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在物联网平台控制台的**边缘计算** \> **边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
+|InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
-|Name|String|是|LinkIoTEdge\_Node|实例名称。
+|Name|String|是|LinkIoTEdge\_Node|边缘实例名称。
 
  支持中文汉字、英文大小写、数字、下划线（\_）和短划线（-），不超过20个字符。 |
 |IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
-|Tags|String|否|k1:v1,k2:v2|实例标签。每个标签由`key:value`组成，多个标签间以英文逗号隔开。如`k1:v1,k2:v2`。
+|Tags|String|否|k1:v1,k2:v2|边缘实例标签。每个标签由`key:value`组成，多个标签间以英文逗号隔开。例如`k1:v1,k2:v2`。
 
  -   标签key限制如下：
     -   不可为空。
