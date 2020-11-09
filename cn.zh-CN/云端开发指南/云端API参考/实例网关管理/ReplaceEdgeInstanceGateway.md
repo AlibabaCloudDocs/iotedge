@@ -7,7 +7,7 @@
 -   替换网关前，必须先在物联网平台控制台的**边缘计算** \> **边缘实例**\> **实例详情**页面重置边缘实例。
 -   单阿里云账号调用该接口的每秒请求数（QPS）最大限制为20。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM用户共享主账号配额。
 
 
 ## 调试
@@ -20,7 +20,7 @@
 |--|--|----|---|--|
 |Action|String|是|ReplaceEdgeInstanceGateway|系统规定参数。取值：ReplaceEdgeInstanceGateway。 |
 |CurrentGatewayId|String|是|oTCJomvT95WPyPPQ5sje\*\*\*\*\*\*|当前网关设备的IotId。IotId是物联网平台为设备生成的唯一标识符。可调用[QueryDevice](~~69905~~)接口查询。 |
-|InstanceId|String|是|G4TGWGYwpo8zwr\*\*\*\*\*\*|边缘实例的ID。在物联网平台控制台的**边缘计算** \> **边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
+|InstanceId|String|是|G4TGWGYwpo8zwr\*\*\*\*\*\*|边缘实例的ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
 |NewGatewayId|String|是|65SkFyhZcU5d3PO2Ri13\*\*\*\*\*\*|要替换的新网关设备的IotId。IotId是物联网平台为设备生成的唯一标识符。可调用[QueryDevice](~~69905~~)接口查询。 |
