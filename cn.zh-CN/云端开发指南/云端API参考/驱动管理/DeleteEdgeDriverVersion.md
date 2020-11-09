@@ -7,7 +7,7 @@
 -   已发布的驱动版本，不允许删除。
 -   单阿里云账号调用该接口的每秒请求数（QPS）最大限制为10。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM用户共享主账号配额。
 
 ## 调试
 
@@ -18,7 +18,7 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|DeleteEdgeDriverVersion|系统规定参数。取值：DeleteEdgeDriverVersion。 |
-|DriverId|String|是|fec565038d7544978d9aed5c1a\*\*\*\*\*\*|驱动ID。在物联网平台控制台的**边缘计算** \> **驱动管理**页面中，鼠标悬浮在目标驱动名称上获取ID。
+|DriverId|String|是|fec565038d7544978d9aed5c1a\*\*\*\*\*\*|驱动ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**驱动管理**页面中，鼠标悬浮在目标驱动名称上获取ID。
 
  您也可以调用[QueryEdgeDriver](~~155776~~)接口获取。 |
 |DriverVersion|String|是|1.2.0|驱动版本号。 |
