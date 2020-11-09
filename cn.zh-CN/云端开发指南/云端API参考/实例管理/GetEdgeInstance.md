@@ -6,7 +6,7 @@
 
 单阿里云账号调用该接口的每秒请求数（QPS）最大限制为10。
 
-**说明：** 子账号共享主账号配额。
+**说明：** RAM用户共享主账号配额。
 
 ## 调试
 
@@ -17,7 +17,7 @@
 |名称|类型|是否必选|示例值|描述|
 |--|--|----|---|--|
 |Action|String|是|GetEdgeInstance|系统规定参数。取值：GetEdgeInstance。 |
-|InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在物联网平台控制台的**边缘计算** \> **边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
+|InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
 |IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
@@ -39,13 +39,13 @@
 |GmtModified|String|2019-06-26 12:33:25|最后一次更新边缘实例的时间。 |
 |GmtModifiedTimestamp|Long|1581912859713|最后一次更新边缘实例的Unix时间戳。 |
 |InstanceId|String|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。 |
-|LatestDeploymentStatus|Integer|2|实例最近一次的部署单状态。
+|LatestDeploymentStatus|Integer|2|边缘实例最近一次部署单的状态。
 
  -   0：未开始（init）。
 -   1：正在进行（processing）。
 -   2：成功（success）。
 -   3：失败（failure）。 |
-|LatestDeploymentType|String|deploy|最近一次的实例部署单类型。
+|LatestDeploymentType|String|deploy|边缘实例最近一次部署单的类型。
 
  -   deploy：部署。
 -   reset：重置。 |
