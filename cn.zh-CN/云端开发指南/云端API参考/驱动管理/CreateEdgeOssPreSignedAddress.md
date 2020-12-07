@@ -20,19 +20,19 @@
 |FileName|String|是|testfile.zip|文件名，格式为`<文件名>.<后缀>`。 |
 |ResourceId|String|是|df9b9f441\*\*\*\*\*\*\*\*\*4c90d0c21d14|资源ID。目前仅支持驱动资源，因此此处为驱动ID。
 
-可在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**驱动管理**页面中，鼠标悬浮在目标驱动名称上获取驱动ID。您也可以调用[QueryEdgeDriver](~~155776~~)接口获取驱动ID。 |
+ 可在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**驱动管理**页面中，鼠标悬浮在目标驱动名称上获取驱动ID。您也可以调用[QueryEdgeDriver](~~155776~~)接口获取驱动ID。 |
 |ResourceVersion|String|是|2.0.0|资源版本。目前仅支持驱动资源，因此此处为驱动版本。 |
 |Type|String|是|DRIVER\_VERSION\_CONTENT|文件内容类型。有如下三种类型：
 
--   DRIVER\_VERSION\_CONTENT：驱动某一版本的代码。
+ -   DRIVER\_VERSION\_CONTENT：驱动某一版本的代码。
 -   DRIVER\_VERSION\_DEFAULT\_CONFIG：驱动某一版本的默认配置。
 -   INSTANCE\_DRIVER\_VERSION\_CONFIG：边缘实例驱动某一版本的配置。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |InstanceId|String|否|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
-您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。
+ 您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。
 
-**说明：** 当**Type**参数取值为**INSTANCE\_DRIVER\_VERSION\_CONFIG**时，此项不可为空。 |
+ **说明：** 当**Type**参数取值为**INSTANCE\_DRIVER\_VERSION\_CONFIG**时，此项不可为空。 |
 
 调用API时，除了本文介绍的该API的特有请求参数，还需传入公共请求参数。公共请求参数说明，请参见[公共参数文档](~~135196~~)。
 
