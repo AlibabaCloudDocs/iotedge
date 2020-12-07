@@ -25,7 +25,7 @@
  您也可以调用[QueryEdgeDriver](~~155776~~)接口获取。 |
 |DriverVersion|String|是|1.2.0|驱动版本号。 |
 |EdgeVersion|String|是|2.0.0|驱动适配的边缘版本，即该驱动只能在该边缘版本及以上版本的网关中运行。例如2.4.0，表示在v2.4.0及以上的边缘版本中运行该驱动。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |Description|String|否|Led驱动（更新描述）|驱动描述。长度不超过256个字节。 |
 |SourceConfig|String|否|\{"ossAddress":"http://nova-scene-daily.oss-cn-shanghai.aliyuncs.com/driver/a8d6e4acc6941ecea8f0cfb30c\*\*\*\*\*\*/ck3n3koe200003h6zf\*\*\*\*\*\*.zip"\}|驱动代码来源配置。JSON格式字符串，格式如下：
 
