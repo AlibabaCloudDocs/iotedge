@@ -28,7 +28,7 @@
  -   nodejs8：Node.js v8
 -   python3：Python v3.5
 -   c: C语言 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |CpuArch|String|否|x86-64|驱动适配的CPU架构。取值如下：
 
  -   armv7
