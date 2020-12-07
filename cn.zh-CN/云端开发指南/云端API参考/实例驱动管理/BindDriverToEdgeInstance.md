@@ -23,7 +23,7 @@
 |InstanceId|String|是|F3APY0tPLhmgGtx0\*\*\*\*|边缘实例ID。在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)的**边缘实例**页面中，鼠标悬浮在目标边缘实例名称上获取ID。
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |DriverVersion|String|否|2.0.0|驱动版本号。为空则默认为最新版本驱动。 |
 |OrderId|String|否|11123458765\*\*\*\*|订单编号。
 
