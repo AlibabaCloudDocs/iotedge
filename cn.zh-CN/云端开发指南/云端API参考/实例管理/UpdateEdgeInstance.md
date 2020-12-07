@@ -23,7 +23,7 @@
 |Name|String|是|LinkIoTEdge\_Node|边缘实例名称。
 
  支持中文汉字、英文大小写、数字、下划线（\_）和短划线（-），不超过20个字符。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |Tags|String|否|k1:v1,k2:v2|边缘实例标签。每个标签由`key:value`组成，多个标签间以英文逗号隔开。例如`k1:v1,k2:v2`。
 
  -   标签key限制如下：
