@@ -25,7 +25,7 @@
 
  您也可以调用[QueryEdgeInstance](~~135214~~)接口获取。 |
 |PageSize|Integer|是|15|返回结果中每页显示的记录数量。最大取值30，最小取值1，默认取值是10。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |ChannelId|String|否|BE0BD49EF5EF4D119D09CC1B25\*\*\*\*\*\*|驱动通道ID。调用[QueryEdgeInstanceChannel](~~162253~~)接口获取。 |
 
 调用API时，除了本文介绍的该API的特有请求参数，还需传入公共请求参数。公共请求参数说明，请参见[公共参数文档](~~135196~~)。
