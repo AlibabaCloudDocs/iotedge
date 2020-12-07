@@ -35,7 +35,7 @@
 -   content：配置内容。format为KV或JSON时，请填配置内容；format为FILE时，请填OSS地址。
 
 **说明：** OSS地址请调用[CreateOssPreSignedAddress](~~155858~~)接口获取。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |ConfigCheckRule|String|否|\{"deviceConfig":\{"required":false\},"driverConfig":\{"required":false\}\}|配置校验规则。JSON格式字符串，格式如下：
 
  `{"deviceConfig":{"required":false},"driverConfig":{"required":false}` 参数说明如下。
