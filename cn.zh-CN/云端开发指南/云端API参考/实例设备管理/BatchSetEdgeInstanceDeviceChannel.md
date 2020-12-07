@@ -27,7 +27,7 @@
 |IotIds.N|RepeatList|是|Hathoyxglj9jpYPyw3WN\*\*\*\*\*\*|子设备ID列表。可调用[QueryDevice](~~69905~~)接口查询子设备ID。
 
  **说明：** 单次调用最多可填写20个子设备ID。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 
 调用API时，除了本文介绍的该API的特有请求参数，还需传入公共请求参数。公共请求参数说明，请参见[公共参数文档](~~135196~~)。
 
