@@ -19,7 +19,7 @@
 |Action|String|是|QueryEdgeInstance|系统规定参数。取值：QueryEdgeInstance。 |
 |CurrentPage|Integer|是|1|从返回结果中的第几页开始显示。最小取值是1。 |
 |PageSize|Integer|是|15|返回结果中每页显示的记录数量。最大取值30，最小取值1，默认取值是10。 |
-|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|公共实例不传此参数；您购买的实例需传入实例ID。 |
+|IotInstanceId|String|否|iot\_instc\_pu\*\*\*\*\_c\*-v64\*\*\*\*\*\*\*\*|实例ID。公共实例不传此参数，企业版实例需传入。 |
 |Name|String|否|测试实例\_test|边缘实例名称。 |
 
 调用API时，除了本文介绍的该API的特有请求参数，还需传入公共请求参数。公共请求参数说明，请参见 [公共参数文档](~~135196~~)。
