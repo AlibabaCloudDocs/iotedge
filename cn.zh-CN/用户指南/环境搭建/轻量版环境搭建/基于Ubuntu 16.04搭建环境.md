@@ -9,26 +9,24 @@ keyword: [轻量版搭建环境, Ubuntu 16.04搭建环境]
 -   Link IoT Edge的远程登录功能依赖设备的SSH服务，请确保设备上已经开启了SSH服务。SSH的详细信息可参考[OpenSSH的使用](https://help.ubuntu.com/lts/serverguide/openssh-server.html.en?spm=a2c4g.11186623.2.11.3ce2427aDPqjvW&file=openssh-server.html.en)。
 -   请确保设备的本地环回端口已启用，即在设备上执行ping 127.0.0.1命令时，返回结果正常。
 
-    ![ping](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p72898.png)
+    ![ping](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p72898.png)
 
 
 ## 创建边缘实例和网关
 
-1.  在[物联网平台控制台](http://iot.console.aliyun.com/)，左侧导航栏单击**相关产品** \> **边缘计算**。
+1.  登录[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)。
 
-    系统跳转到[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)。
-
-2.  在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)，左侧导航栏单击**边缘实例**。
+2.  在左侧导航栏单击**边缘实例**。
 
 3.  创建一个边缘实例。
 
-    1.  单击**新增实例**，在弹出窗口中设置实例名称。
+    1.  单击**新增实例**，在弹出对话框中设置实例名称。
 
         **说明：** 实例名称支持中文、英文字母大小写、数字、下划线（\_）和短划线（-），长度不超过20个字符，1个汉字算2个字符。
 
-    2.  根据所搭建的环境，选择对应的Link IoT Edge产品规格，详细介绍请参见[产品规格](/cn.zh-CN/产品简介/产品规格.md)。
+    2.  根据所搭建的环境，选择对应的Link IoT Edge产品规格。详细介绍，请参见[产品规格](/cn.zh-CN/产品简介/产品规格.md)。
 
-        物联网边缘计算支持自动分配网关到边缘实例，您可以无需设置其它新增实例相关参数，直接跳转到[步骤4](#d7e285)。物联网边缘计算自动为您的边缘实例创建名为LEGatewayAuto的网关产品并在该产品下添加一个随机命名的网关设备。
+        物联网边缘计算支持自动分配网关到边缘实例，您可以无需设置其它新增实例相关参数，直接跳转到[步骤4](#d7e274)。物联网边缘计算自动为您的边缘实例创建名为LEGatewayAuto的网关产品，并在该产品下添加一个随机命名的网关设备。
 
         **说明：**
 
@@ -51,17 +49,17 @@ keyword: [轻量版搭建环境, Ubuntu 16.04搭建环境]
 
         物联网边缘计算中的网关承载边缘计算能力，每个实例必须分配一个网关设备，并且该网关设备同一时间只能被分配到一个边缘实例。
 
-        ![创建网关产品](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p37158.png)
+        ![创建网关产品](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p37158.png)
 
-    3.  在新建产品页面中，设置网关产品参数，然后单击**完成**。
+    3.  在**创建产品**对话框中，设置网关产品参数，然后单击**完成**。
 
         物联网边缘计算中的**新建网关产品**，继承了物联网平台**设备管理** \> **产品**中的产品功能，此处已自动为您简化了创建产品的步骤，以便您更快速地创建适合物联网边缘计算中使用的网关产品。
 
-        ![创建产品](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p37159.png)
+        ![创建产品](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p37159.png)
 
         |参数|说明|
         |--|--|
-        |产品名称|为网关产品设置名称，用于后续的查询及识别网关产品。支持中文、英文字母大小写、数字和下划线（\_），长度限制4~30，一个中文汉字算2位。|
+        |产品名称|为网关产品设置名称，用于后续的查询及识别网关产品。支持中文、英文字母大小写、数字和下划线（\_），长度限制4~30个字符，一个中文汉字算2位。|
         |所属品类|选择品类，为该产品定义[物模型](/cn.zh-CN/设备管理/物模型/什么是物模型.md)。
 
 可选择的值为：
@@ -69,22 +67,22 @@ keyword: [轻量版搭建环境, Ubuntu 16.04搭建环境]
         -   **标准品类**：选择任一物联网平台预定义的品类，快速完成产品的功能定义。选择产品模板后，您可以在该模板基础上，编辑、修改、新增功能。
         -   **自定义品类**：需根据实际需要，定义产品功能。
 若您需要的网关没有特殊功能定义，建议您选择**自定义品类**。 |
-        |产品描述|可输入文字，用来描述产品信息。字数限制为100。可以为空。|
+        |产品描述|可输入文字，用来描述产品信息。字数限制为100个字符。可以为空。|
 
-        产品创建成功后，页面自动跳转回新增实例页面，并且**网关产品**参数下自动分配了刚创建的网关产品。
+        产品创建成功后，自动跳转回新增实例对话框，并且在**网关产品**参数下自动分配刚刚创建的网关产品。
 
-    4.  在新增实例页面，单击**网关设备**下的**新建网关设备**为网关产品添加设备。
+    4.  在新增实例对话框，单击**网关设备**下的**新建网关设备**，为网关产品添加设备。
 
-        物联网边缘计算中的新建网关设备功能继承物联网平台**设备管理** \> **设备**的功能。
+        物联网边缘计算中的新建网关设备功能，继承物联网平台**设备管理** \> **设备**的功能。
 
-        ![新建网关设备](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p37160.png)
+        ![新建网关设备](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p37160.png)
 
     5.  根据界面提示设置参数后，单击**确认**。
 
         |参数|描述|
         |--|--|
         |产品|系统已自动关联上一步创建的网关产品。|
-        |设备名称|为该网关设备命名。设备名称需保持产品内唯一。如不填写，系统将自动生成。 **说明：** 设备名称长度为4~32个字符，可包含英文字母、数字和特殊字符，包括短划线（-）、下划线（\_）、at符号（@）、点号（.）和英文冒号（:）。 |
+        |设备名称|为该网关设备命名。设备名称需保持产品内唯一。如不填写，系统将自动生成。 **说明：** 设备名称长度为4~32个字符，可包含英文字母、数字和特殊字符，包括短划线（-）、下划线（\_）、at（@）、英文句号（.）和英文冒号（:）。 |
 
 5.  实例参数设置完成后，单击**确定**，至此您已创建边缘实例和网关。
 
@@ -95,11 +93,11 @@ keyword: [轻量版搭建环境, Ubuntu 16.04搭建环境]
 
 1.  在**边缘实例**页面，单击实例名称右侧的**软件安装**。
 
-    ![下载命令](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p44201.png)
+    ![下载命令](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p44201.png)
 
 2.  根据环境设置下载参数，然后单击**生成安装命令**。
 
-    ![下载命令](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p44238.png)
+    ![下载命令](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p44238.png)
 
     |参数|描述|
     |--|--|
@@ -110,7 +108,7 @@ keyword: [轻量版搭建环境, Ubuntu 16.04搭建环境]
 
 3.  复制操作系统命令备用。
 
-    ![复制命令](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p44857.png)
+    ![复制命令](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p44857.png)
 
 4.  登录您Ubuntu 16.04系统的机器。
 
@@ -120,21 +118,21 @@ keyword: [轻量版搭建环境, Ubuntu 16.04搭建环境]
 
     **说明：** 如果不是第一次安装启动Link IoT Edge，可使用已下载的link-iot-edge-lite.sh脚本，对Link IoT Edge进行重启、停止、获取状态、修改配置参数等操作，命令详情请见下图：
 
-    ![轻量版操作命令](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p44855.png)
+    ![轻量版操作命令](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p44855.png)
 
     若系统显示如下信息，表示Link IoT Edge核心服务启动成功。
 
-    ![LE启动成功](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2597528951/p37295.png)
+    ![LE启动成功](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2597528951/p37295.png)
 
     您也可以在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)，左侧导航栏选择**边缘实例**，在已创建好的边缘实例右侧单击**查看**进入**实例详情**页面，选择**网关**，查看网关状态。
 
-    ![网关在线](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2597528951/p48694.png)
+    ![网关在线](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2597528951/p48694.png)
 
-6.  （可选）Link IoT Edge支持将边缘实例授权给其他阿里云用户操作。
+6.  （可选）Link IoT Edge支持将边缘实例授权给其他阿里云账号操作。
 
     在边缘实例页面，单击左上角**授权**，在弹出对话框中单击**新增授权**，根据界面提示设置参数。
 
-    ![实例授权](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2597528951/p66515.png)
+    ![实例授权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2597528951/p66515.png)
 
     |参数|描述|
     |--|--|
