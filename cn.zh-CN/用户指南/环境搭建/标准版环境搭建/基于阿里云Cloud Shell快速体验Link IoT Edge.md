@@ -12,21 +12,19 @@ Cloud Shell会启动一台虚拟机，并在该虚拟机上为边缘实例搭建
 
 ## 创建边缘实例和网关
 
-1.  在[物联网平台控制台](http://iot.console.aliyun.com/)，左侧导航栏单击**相关产品** \> **边缘计算**。
+1.  登录[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)。
 
-    系统跳转到[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)。
-
-2.  在[边缘计算控制台](https://iot.console.aliyun.com/le/instance/list)，左侧导航栏单击**边缘实例**。
+2.  在左侧导航栏单击**边缘实例**。
 
 3.  创建一个边缘实例。
 
-    1.  单击**新增实例**，在弹出窗口中设置实例名称。
+    1.  单击**新增实例**，在弹出对话框中设置实例名称。
 
         **说明：** 实例名称支持中文、英文字母大小写、数字、下划线（\_）和短划线（-），长度不超过20个字符，1个汉字算2个字符。
 
-    2.  根据所搭建的环境，选择对应的Link IoT Edge产品规格，详细介绍请参见[产品规格](/cn.zh-CN/产品简介/产品规格.md)。
+    2.  根据所搭建的环境，选择对应的Link IoT Edge产品规格。详细介绍，请参见[产品规格](/cn.zh-CN/产品简介/产品规格.md)。
 
-        物联网边缘计算支持自动分配网关到边缘实例，您可以无需设置其它新增实例相关参数，直接跳转到[步骤4](#d7e285)。物联网边缘计算自动为您的边缘实例创建名为LEGatewayAuto的网关产品并在该产品下添加一个随机命名的网关设备。
+        物联网边缘计算支持自动分配网关到边缘实例，您可以无需设置其它新增实例相关参数，直接跳转到[步骤4](#d7e274)。物联网边缘计算自动为您的边缘实例创建名为LEGatewayAuto的网关产品，并在该产品下添加一个随机命名的网关设备。
 
         **说明：**
 
@@ -49,17 +47,17 @@ Cloud Shell会启动一台虚拟机，并在该虚拟机上为边缘实例搭建
 
         物联网边缘计算中的网关承载边缘计算能力，每个实例必须分配一个网关设备，并且该网关设备同一时间只能被分配到一个边缘实例。
 
-        ![创建网关产品](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p37158.png)
+        ![创建网关产品](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p37158.png)
 
-    3.  在新建产品页面中，设置网关产品参数，然后单击**完成**。
+    3.  在**创建产品**对话框中，设置网关产品参数，然后单击**完成**。
 
         物联网边缘计算中的**新建网关产品**，继承了物联网平台**设备管理** \> **产品**中的产品功能，此处已自动为您简化了创建产品的步骤，以便您更快速地创建适合物联网边缘计算中使用的网关产品。
 
-        ![创建产品](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p37159.png)
+        ![创建产品](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p37159.png)
 
         |参数|说明|
         |--|--|
-        |产品名称|为网关产品设置名称，用于后续的查询及识别网关产品。支持中文、英文字母大小写、数字和下划线（\_），长度限制4~30，一个中文汉字算2位。|
+        |产品名称|为网关产品设置名称，用于后续的查询及识别网关产品。支持中文、英文字母大小写、数字和下划线（\_），长度限制4~30个字符，一个中文汉字算2位。|
         |所属品类|选择品类，为该产品定义[物模型](/cn.zh-CN/设备管理/物模型/什么是物模型.md)。
 
 可选择的值为：
@@ -67,22 +65,22 @@ Cloud Shell会启动一台虚拟机，并在该虚拟机上为边缘实例搭建
         -   **标准品类**：选择任一物联网平台预定义的品类，快速完成产品的功能定义。选择产品模板后，您可以在该模板基础上，编辑、修改、新增功能。
         -   **自定义品类**：需根据实际需要，定义产品功能。
 若您需要的网关没有特殊功能定义，建议您选择**自定义品类**。 |
-        |产品描述|可输入文字，用来描述产品信息。字数限制为100。可以为空。|
+        |产品描述|可输入文字，用来描述产品信息。字数限制为100个字符。可以为空。|
 
-        产品创建成功后，页面自动跳转回新增实例页面，并且**网关产品**参数下自动分配了刚创建的网关产品。
+        产品创建成功后，自动跳转回新增实例对话框，并且在**网关产品**参数下自动分配刚刚创建的网关产品。
 
-    4.  在新增实例页面，单击**网关设备**下的**新建网关设备**为网关产品添加设备。
+    4.  在新增实例对话框，单击**网关设备**下的**新建网关设备**，为网关产品添加设备。
 
-        物联网边缘计算中的新建网关设备功能继承物联网平台**设备管理** \> **设备**的功能。
+        物联网边缘计算中的新建网关设备功能，继承物联网平台**设备管理** \> **设备**的功能。
 
-        ![新建网关设备](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p37160.png)
+        ![新建网关设备](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p37160.png)
 
     5.  根据界面提示设置参数后，单击**确认**。
 
         |参数|描述|
         |--|--|
         |产品|系统已自动关联上一步创建的网关产品。|
-        |设备名称|为该网关设备命名。设备名称需保持产品内唯一。如不填写，系统将自动生成。 **说明：** 设备名称长度为4~32个字符，可包含英文字母、数字和特殊字符，包括短划线（-）、下划线（\_）、at符号（@）、点号（.）和英文冒号（:）。 |
+        |设备名称|为该网关设备命名。设备名称需保持产品内唯一。如不填写，系统将自动生成。 **说明：** 设备名称长度为4~32个字符，可包含英文字母、数字和特殊字符，包括短划线（-）、下划线（\_）、at（@）、英文句号（.）和英文冒号（:）。 |
 
 5.  实例参数设置完成后，单击**确定**，至此您已创建边缘实例和网关。
 
@@ -93,45 +91,45 @@ Cloud Shell会启动一台虚拟机，并在该虚拟机上为边缘实例搭建
 
 1.  在**边缘实例**页面，单击实例名称右侧的**软件安装**。
 
-    ![下载命令](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/1597528951/p44201.png)
+    ![下载命令](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1597528951/p44201.png)
 
 2.  在软件安装对话框中，单击**立即体验**，使用Cloud Shell虚拟机快速体验标准版Link IoT Edge产品功能，Cloud Shell详细操作请参见[云命令行]()。
 
-    ![下载命令](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9201032951/p44200.png)
+    ![下载命令](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9201032951/p44200.png)
 
 3.  启动Cloud Shell后，会在虚拟机上为当前边缘实例安装最新的标准版Link IoT Edge。安装完成后Cloud Shell中会出现`Finish install and run LinkIoTEdge`的提示，实例中的网关会变成在线状态。
 
-    ![启动CloudShell成功](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9201032951/p60280.png)
+    ![启动CloudShell成功](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9201032951/p60280.png)
 
     使用**立即体验**功能时，需要注意如下事项：
 
     -   单击**立即体验**，系统会为您启动Cloud Shell并自动创建一台Linux虚拟机供您使用；重启Cloud Shell时，会将已创建的Linux虚拟机销毁并创建一台新的Linux虚拟机。
     -   关闭Cloud Shell会话窗口并不能立即停止运行Link IoT Edge，在Cloud Shell会话窗口无操作45分钟后，或者关闭所有Cloud Shell会话窗口15分钟后，虚拟机会被销毁，此时Link IoT Edge才会停止运行。
-    -   如果您需要同时在多个窗口中访问虚拟机，单击控制台右上角的![ 命令行工具](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9201032951/p59656.png)图标，启动Cloud Shell会话窗口，最多同时可打开5个会话窗口。Cloud Shell在同一时刻只会创建一台虚拟机，因此打开的多个会话窗口都会自动连接到此虚拟机上。
+    -   如果您需要同时在多个窗口中访问虚拟机，单击控制台右上角的![ 命令行工具](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9201032951/p59656.png)图标，启动Cloud Shell会话窗口，最多同时可打开5个会话窗口。Cloud Shell在同一时刻只会创建一台虚拟机，因此打开的多个会话窗口都会自动连接到此虚拟机上。
 
-        ![命令行按钮](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9201032951/p59657.png)
+        ![命令行按钮](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9201032951/p59657.png)
 
     -   单击**立即体验**启动Cloud Shell后，若发现该虚拟机已经安装过Link IoT Edge（例如，同一个边缘实例多次单击**立即体验**时），会先卸载之前的Link IoT Edge，并在虚拟机上为当前的边缘实例安装新的标准版Link IoT Edge。
     -   已通过**立即体验**功能在虚拟机上启动Link IoT Edge后，如果您需要在自己的硬件中安装Link IoT Edge，请先将运行在虚拟机上的Link IoT Edge停止，否则可能会导致部分功能异常。可以通过如下两种方式停止Link IoT Edge ：
-        -   在Cloud Shell会话窗口左上角单击![按钮](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/9201032951/p60420.png)图标重启Cloud Shell。
+        -   在Cloud Shell会话窗口左上角单击![按钮](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9201032951/p60420.png)图标重启Cloud Shell。
         -   在Cloud Shell中执行/linkedge/gateway/build/script/iot\_gateway\_stop.sh命令。
-4.  （可选）在实例详情页面选择**网关**，打开**远程访问**按钮后，可对网关进行远程管理，详细操作步骤请参见[远程服务访问](/cn.zh-CN/用户指南/远程运维管理/远程服务访问.md)。
+4.  （可选）在实例详情页面单击**网关**页签，打开**远程访问**开关后，可对网关进行远程管理，详细操作步骤，请参见[远程服务访问](/cn.zh-CN/用户指南/远程运维管理/远程服务访问.md)。
 
 5.  （可选）在实例详情页面，查看CPU使用率、内存使用率、存储使用率以及实例进程需要授权访问阿里云云监控（CloudMonitor）服务。
 
-    1.  请根据[云资源访问](/cn.zh-CN/用户指南/云资源访问.md)内容，添加角色或分配已有的角色，并确保该角色拥有**管理云监控（CloudMonitor）的权限**。
+    1.  添加角色或分配已有的角色，并确保该角色拥有**管理云监控（CloudMonitor）的权限**。详细操作，请参见[云资源访问](/cn.zh-CN/用户指南/云资源访问.md)。
 
-    2.  选择**监控信息**页签，打开页面右侧的**云监控状态**按钮，如下图所示。
+    2.  选择**监控信息**页签，打开页面右侧的**云监控状态**开关，如下图所示。
 
-        ![国际站中文-云监控按钮](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/0940277951/p101806.png)
+        ![国际站中文-云监控按钮](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0940277951/p101806.png)
 
         云监控状态打开后，可在**监控信息**页签，查看网关的各类监控信息。
 
-6.  （可选）Link IoT Edge支持将边缘实例授权给其他阿里云用户操作。
+6.  （可选）Link IoT Edge支持将边缘实例授权给其他阿里云账号操作。
 
     在边缘实例页面，单击左上角**授权**，在弹出对话框中单击**新增授权**，根据界面提示设置参数。
 
-    ![实例授权](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/2597528951/p66515.png)
+    ![实例授权](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2597528951/p66515.png)
 
     |参数|描述|
     |--|--|
@@ -149,6 +147,6 @@ Cloud Shell会启动一台虚拟机，并在该虚拟机上为边缘实例搭建
 
 2.  当部署状态显示为**部署成功**，表示部署实例完成。您可以单击**查看日志**，查看部署详情。您也可以通过单击实例详情页面右上角的**查看部署日志**，查看历史部署情况。
 
-    ![查看部署日志](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/5859320061/p48671.png)
+    ![查看部署日志](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5859320061/p48671.png)
 
 
