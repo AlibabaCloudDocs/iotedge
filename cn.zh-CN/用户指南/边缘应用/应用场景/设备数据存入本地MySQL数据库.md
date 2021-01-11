@@ -2,8 +2,8 @@
 
 本文以使用官方示例驱动的LightSensor设备为例，描述将设备的数据存储到本地MySQL数据库的方法。
 
--   本示例仅适用于Link IoT Edge专业版，请您确保已完成边缘实例的创建。具体操作请参见[专业版环境搭建](/cn.zh-CN/用户指南/环境搭建/专业版环境搭建/基于Ubuntu 16.04搭建环境.md)。
--   创建光照度传感器产品以及该产品下的LightSensor设备，并将设备分配至边缘实例。具体操作请参见[示例驱动](/cn.zh-CN/用户指南/设备接入/示例驱动.md)。
+-   本示例仅适用于Link IoT Edge专业版，请您确保已完成边缘实例的创建。具体操作，请参见[专业版环境搭建](/cn.zh-CN/用户指南/环境搭建/专业版环境搭建/基于Ubuntu 16.04搭建环境.md)。
+-   创建光照度传感器产品以及该产品下的LightSensor设备，并将设备分配至边缘实例。具体操作，请参见[示例驱动](/cn.zh-CN/用户指南/设备接入/示例驱动.md)。
 
 在生产中常需要结合传感器的历史数据和行业的算法模型，在边缘端进行分析和判断现场状态。实现此操作首先需要把设备上报的数据存储到本地数据库。
 
@@ -17,7 +17,7 @@ MySQL容器镜像应用，将作为MySQL数据库服务（server），供函数�
 
 2.  在左侧导航栏单击**应用管理**。
 
-3.  创建容器镜像类型的边缘应用，具体操作请参见[容器镜像应用](/cn.zh-CN/用户指南/边缘应用/新增自研应用/容器镜像应用.md)。
+3.  创建容器镜像类型的边缘应用，具体操作，请参见[容器镜像应用](/cn.zh-CN/用户指南/边缘应用/新增自研应用/容器镜像应用.md)。
 
     部分参数说明如下3个表格所示，其余参数保持默认值或无需配置。
 
@@ -99,7 +99,7 @@ MySQL容器镜像应用，将作为MySQL数据库服务（server），供函数�
 
     代码包上传成功后，您可在**在线编辑**框中查看源码。
 
-    ![saveMysqlDB](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6078879851/p69978.png)
+    ![saveMysqlDB](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6078879851/p69978.png)
 
 7.  （可选）配置数据库参数。
 
@@ -110,7 +110,7 @@ MySQL容器镜像应用，将作为MySQL数据库服务（server），供函数�
 
 ## 四、分配本地数据库存储函数到边缘实例
 
-1.  使用已创建的saveMysqlDB函数，创建函数计算类型的边缘应用，具体操作请参见[函数计算应用](/cn.zh-CN/用户指南/边缘应用/新增自研应用/函数计算应用.md)。
+1.  使用已创建的saveMysqlDB函数，创建函数计算类型的边缘应用。具体操作，请参见[函数计算应用](/cn.zh-CN/用户指南/边缘应用/新增自研应用/函数计算应用.md)。
 
     应用信息参数说明如下：
 
@@ -176,10 +176,10 @@ MySQL容器镜像应用，将作为MySQL数据库服务（server），供函数�
 
 2.  登录您的网关，执行tail -f /linkedge/run/logger/fc-base/appsaveMysqlDB/log.INFO命令，可以查看该应用的日志，来观察其实际运行情况。
 
-3.  在本地MySQL数据库（本示例中名为mysql\_db的数据库）中执行select \* from YourProductKey\_YourDeviceName命令，可以查询到通过appsaveMysqlDB应用存储到MySQL数据库的LightSensor设备数据。
+3.  在本地MySQL数据库（本示例中名为mysql\_db的数据库）中执行select \* from YourProductKey\_YourDeviceName;命令，可以查询到通过appsaveMysqlDB应用存储到MySQL数据库的LightSensor设备数据。
 
     **说明：** 将命令中的YourProductKey\_YourDeviceName替换为您实际设备的设备证书信息，例如本示例中LightSensor设备的ProductKey为a1\*\*\*\*\*xPAf，DeviceName为LightSensor，那么实际执行的命令为select \* from a1\*\*\*\*\*xPAf\_LightSensor。
 
-    ![数据存储](https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/assets/img/zh-CN/6078879851/p70000.png)
+    ![数据存储](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/6078879851/p70000.png)
 
 
