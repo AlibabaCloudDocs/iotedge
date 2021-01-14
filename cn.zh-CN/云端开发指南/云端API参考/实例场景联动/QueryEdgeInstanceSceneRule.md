@@ -75,8 +75,7 @@ http(s)://iot.cn-shanghai.aliyuncs.com/?Action=QueryEdgeInstanceSceneRule
             <Rule>
                 <GmtCreate>1582004185000</GmtCreate>
                 <RuleId>f041397879ad4d89822811d741******</RuleId>
-                <GmtModified>1582098176000</GmtModified>
-                <RuleStatus>1</RuleStatus>
+                <Status>1</Status>
                 <RuleName>test</RuleName>
             </Rule>
         </RuleList>
@@ -99,8 +98,7 @@ http(s)://iot.cn-shanghai.aliyuncs.com/?Action=QueryEdgeInstanceSceneRule
       {
         "GmtCreate": "1582004185000",
         "RuleId": "f041397879ad4d89822811d741******",
-        "GmtModified": "1582098176000",
-        "RuleStatus": 1,
+        "Status": 1,
         "RuleName": "test"
       }
     ],
