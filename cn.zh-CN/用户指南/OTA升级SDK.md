@@ -5,7 +5,7 @@
 请按如下模板发送信息，[联系我们](https://ai.alimebot.taobao.com/intl/index.htm?from=3kMRyQHHTS)获取OTA升级SDK的详细使用说明。
 
 ```
-主题：获取OTA升级SDK和操作说明文档
+主题：获取物联网边缘计算产品OTA升级SDK和操作说明文档
 公司名称：
 公司所属行业信息：
 使用OTA升级SDK的产品和设备信息：（请简单描述例如设备型号、CPU、通信协议等产品或设备信息）
