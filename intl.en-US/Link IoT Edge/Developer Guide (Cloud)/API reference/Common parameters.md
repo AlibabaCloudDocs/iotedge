@@ -45,11 +45,11 @@ Every response returns a unique RequestId regardless of whether the call is succ
 
         ```
         <? xml version="1.0" encoding="UTF-8"? > 
-        <!—Root node of the response-->
+        <!--Root node of the response-->
         <Operation name+Response>
-            <!—Return request tag-->
+            <!--Return request tag-->
             <RequestId>4C467B38-3910-447D-87BC-AC049166F216</RequestId>
-            <!—Response result data-->
+            <!--Response result data-->
         </Operation name+Response>
         ```
 
