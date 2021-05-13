@@ -59,7 +59,7 @@ In addition to the preceding operation-specific request parameters, you must spe
 -   10: Lite Edition
 -   20: Standard Edition
 -   30: Pro Edition |
-|Tags|String|k1:v1,k2:v2|The tags of the edge instance. Each tag is a `key-value`pair. Multiple tags are separated with commas\(,\). Example: `k1:v1,k2:v2`. |
+|Tags|String|k1:v1,k2:v2|The tags of the edge instance. Each tag is a `key-value` pair. Multiple tags are separated with commas\(,\). Example: `k1:v1,k2:v2`. |
 |Type|String|0|Indicates whether you own the edge instance or you are authorized to use the edge instance. Valid values:
 
 -   0: You own the edge instance.
