@@ -31,7 +31,7 @@ http://Endpoint/?Action=xx&Parameters
 ```
 https://iot.cn-shanghai.aliyuncs.com/?Action=Pub
 &Format=XML
-&Version=2017-04-20
+&Version=2018-01-20
 &Signature=Pc5WB8gokVn0xfeu%2FZV%2BiNM1dgI%3D
 &SignatureMethod=HMAC-SHA1
 &SignatureNonce=15215528852396
@@ -56,7 +56,7 @@ https://POP网关域名/data/api.json/?Action=Pub
 
 ## API在线调试
 
-阿里云OpenAPI开发者门户提供[API在线调试工具](https://next.api.aliyun.com/api/Iot)。在**API调试**页面，您可以快速检索和体验调用API。系统会根据您输入的参数同步生成各语言SDK的Demo代码。各语言SDK Demo显示在页面右侧**SDK示例**页签下供您参考。在**调用结果**页签下，查看API调用的真实请求URL和JSON格式的返回结果。
+阿里云OpenAPI开发者门户提供[API在线调试工具](https://next.api.aliyun.com/api/Iot)。在**API调试**页面，您可以快速检索和体验调用API。系统会根据您输入的参数同步生成各语言SDK的代码示例。各语言SDK代码示例显示在页面右侧**SDK示例**页签下供您参考。在**调用结果**页签下，查看API调用的真实请求URL和JSON格式的返回结果。
 
 ![物联网平台API](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1135915161/p40697.png)
 
@@ -64,5 +64,5 @@ https://POP网关域名/data/api.json/?Action=Pub
 
 为了确保您的账号安全，建议您使用RAM用户调用API。如果您使用RAM用户调用物联网平台API，您需要为该RAM用户创建、授予相应的授权策略。
 
-为RAM用户授权调用API，请参见[IoT API 授权映射表](/cn.zh-CN/权限管理/账号授权/RAM授权管理/IoT API授权映射表.md)。
+为RAM用户授权调用API，请参见[IoT API 授权映射表](/cn.zh-CN/权限管理/账号授权/RAM授权管理/IoT授权映射表.md)。
 
