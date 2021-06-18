@@ -14,9 +14,9 @@ The following figure shows the process of publishing a built-in driver.
 
 ## 1. Procedure on the cloud
 
-1.  Log on to the [IoT Platform console](https://iot.console.aliyun.com/). In the left-side navigation pane, choose **Link IoT Edge** \> **Drivers**.
+1.  Log on to the [Link IoT Edge console](https://iot.console.aliyun.com/le/instance/list). In the left-side navigation pane, click **Drivers**.
 
-2.  On the Drivers page, click the Custom Drivers tab. On this tab, click **Create Driver**.
+2.  On the Drivers page, click the Custom Drivers tab. On the Custom Drivers tab, click **Create Driver**.
 
 3.  On the **Create Driver**page, specify the parameters as prompted.
 
@@ -27,12 +27,12 @@ The following figure shows the process of publishing a built-in driver.
         |Parameter|Description|
         |---------|-----------|
         |Driver Name|The name of the custom driver. The name must be 1 to 20 characters in length, and can contain letters, digits, and underscores \(\_\). The name must start with a letter.|
-        |Communication Protocol|The communications protocol that is used to develop the driver. The valid values are Modbus, OPCUA, and Custom.|
-        |Language|The programming language that is used to develop the driver. The valid values are Node.js 8, Python 3.5, C, and Java 8. If you select C, then you must also select the CPU Architecture of the driver. |
+        |Communication Protocol|The communication protocol that is used to develop the driver. Valid values: Modbus, OPCUA, and Custom.|
+        |Language|The programming language that is used to develop the driver. Valid values: Node.js 8, Python 3.5, C, and Java 8. If you set the Language parameter to C, you must set the CPU Architecture parameter. |
         |Built-in Driver|Specifies whether the driver is built-in.         -   If you select Yes, a local built-in driver is used. You do not need to upload a driver file.
-        -   If you select No, you must upload a driver file and deploy the driver to the cloud. For more information, see [Publish cloud-hosted drivers](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Publish drivers/Publish cloud-hosted drivers.md).
+        -   If you select No, you must upload a driver file and deploy the driver to the cloud. For more information, see [Publish drivers to the cloud](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Publish drivers/Publish cloud-hosted drivers.md).
 To publish a built-in driver, you must select Yes. |
-        |Driver Version|The version number of the driver. You cannot specify two identical version numbers for a driver.|
+        |Driver Version|The unique version number of the driver. You cannot specify two identical version numbers for a driver.|
         |Link IoT Edge Version for the Driver|The Link IoT Edge version that supports the driver. The driver can run only in the gateways for Link IoT Edge of the specified version or later.|
         |Version Description|Optional. The description of the driver version.|
 
@@ -45,9 +45,9 @@ To publish a built-in driver, you must select Yes. |
         |Configuration Format|The configuration method. Valid values:         -   Key-value Configuration
         -   JSON Format
         -   Configuration File |
-        |Configuration Format \(Key-value Configuration\)|If you select **Key-value Configuration**, click **Add Configuration** on the Driver Configurations page. Then, specify the Configuration Name, Value, and Description parameters. You can add a maximum of 100 key-value pairs. |
-        |Configuration Format \(JSON Format\)|If you select **JSON Format**, enter the JSON-formatted data to configure the driver. The data size cannot exceed 1 KB. Link IoT Edge automatically verifies the format. If the format is invalid, modify the data as prompted.|
-        |Configuration Format \(Configuration File\)|If you select **Configuration File**, edit a local configuration file and upload it to the console.|
+        |Configuration Format: Key-value Configuration|If you select Key-value Configuration, click **Add Configuration**. Then, set the Configuration Name, Value, and Description parameters to configure the driver. You can add a maximum of 100 key-value pairs. |
+        |Configuration Format: JSON Format|If you select JSON Format, enter JSON-formatted data to configure the driver. The data size cannot exceed 1 KB. Link IoT Edge automatically verifies the format. If the format is invalid, modify the JSON-formatted data as prompted.|
+        |Configuration Format: Configuration File|If you select Configuration File, edit a configuration file on your computer and upload it to the Link IoT Edge console.|
 
     -   Container Configurations
 
@@ -55,13 +55,13 @@ To publish a built-in driver, you must select Yes. |
 
         |Parameter|Description|
         |---------|-----------|
-        |Host Mode|Specifies whether to isolate the container network from the host network. The valid values are described as follows:         -   Yes: This value indicates that the container network is the same as the host network.
-        -   No: This value indicates that the container network is isolated from the host network. If you select this option, you must configure the Network Port Mapping settings. |
-        |Network Port Mapping|The mappings between host network ports and container network ports. This parameter is available only whenHost Mode is set to No. The network where the function runs is isolated from the host network. You can map the listening port of the function in the container to a host network port. This allows client programs on various hosts to access the services that are provided by the function. You can specify a maximum of 10 entries. For example, the `fc-http-server` function runs in a host container, and provides services by using socket port 80. The client programs on other hosts cannot access the `fc-http-server` function by accessing port 80 on the current host. To enable the client programs on other hosts to access the `fc-http-server` function, you must map the network port \(port 80\) in the container where the function runs to a host network port, such as port 8080. Then, the client programs on other hosts can access the `IP address:port 8080` in the host network, and use the services provided by the `fc-http-server` function. |
-        |Privilege Mode|Specifies whether to enable the privilege mode. Root users of containers can access host services only as general users. If you want to change the system time or run the mount command in containers, you must be granted the required root permissions. In this scenario, you must enable the privilege mode for the containers.
+        |Host Mode|Specifies whether to isolate the container network from the host network. Valid values:         -   Yes: The container network is the same as the host network.
+        -   No: The container network is isolated from the host network. If you select this option, you must set the Network Port Mapping parameter. |
+        |Network Port Mapping|The mappings between host network ports and container network ports. This parameter is available only when you set the Host Mode parameter to No. The network where the function runs is isolated from the host network. You can map the listening port of the function in the container to a host network port. This allows client programs on various hosts to access the services that are provided by the function. You can specify a maximum of 10 entries. For example, the `fc-http-server` function runs in a host container, and provides services by using Port 80. The client programs on other hosts cannot access the `fc-http-server` function by accessing Port 80 on the current host. To enable the client programs on other hosts to access the `fc-http-server` function, you must map Port 80 in the container where the function runs to a host network port, such as Port 8080. Then, the client programs on other hosts can access `IP address:port 8080` on the host network, and use the services provided by the `fc-http-server` function. |
+        |Privilege Mode|Specifies whether to enable the privilege mode. Root users of containers can access host services only as regular users. If you need to change the system time or run the mount command in containers, you must be granted the required root permissions. In this scenario, you must enable the privilege mode for the containers.
 
- **Note:** If you enable the privilege mode, applications and programs in the containers are granted the host root permissions, and all the host devices are mapped to the containers. Therefore, you do not need to configure the Device Mapping settings. |
-        |Device Mapping|The device mappings. This parameter is available only when you select No for Privilege Mode. The network where the device management system resides is isolated from the host network. To enable a function to access a host device such as a serial interface, you must map the device to the container where the function runs. You can specify a maximum of 10 entries.|
+**Note:** If you enable the privilege mode, applications and programs in the containers are granted the host root permissions, and all the host devices are mapped to the containers. Therefore, you do not need to set the Device Mapping parameter. |
+        |Device Mapping|The device mappings. This parameter is available only when you set the Privilege Mode parameter to No. The network where the device management system resides is isolated from the host network. To enable a function to access a host device such as a serial port, you must map the device to the container where the function runs. You can specify a maximum of 10 entries.|
         |Volume Mapping|The volume mappings. The network where the file system resides is isolated from the host network. To enable a function to access a host file, you must map the file to the container where the function runs. You can specify a maximum of 10 entries.|
 
     -   Configuration Verification
@@ -70,8 +70,8 @@ To publish a built-in driver, you must select Yes. |
 
         |Parameter|Description|
         |---------|-----------|
-        |Driver Configurations|If you select the check box, you must complete **driver configurations** before you can deploy the edge instance. The driver configurations are specified after the driver is assigned to an edge instance and sub-devices are assigned to the driver.|
-        |Device Configurations|If you select the check box, you must complete **device configurations** before you can deploy the edge instance. The device configurations are specified after the driver is assigned to an edge instance and sub-devices are assigned to the driver.|
+        |Driver Configurations|If you select **Driver Configurations**, you must complete driver configurations before you can deploy the edge instance. The driver configurations are specified after the driver is assigned to an edge instance and sub-devices are assigned to the driver.|
+        |Device Configurations|If you select **Device Configurations**, you must complete device configurations before you can deploy the edge instance. The device configurations are specified after the driver is assigned to an edge instance and sub-devices are assigned to the driver.|
 
 4.  After the parameters are set, click **Confirm**. You can find the driver that has been created on the Custom Drivers tab.
 
@@ -146,7 +146,7 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
 
 6.  In the built-in driver folder, download and decompress the [shell script tool for built-in drivers](https://iotedge-web.oss-cn-shanghai.aliyuncs.com/public/testingTool/pre-installed.tar.gz).
 
-    The following figure shows the directory structure of the script tool after decompression.
+    The following code shows the directory structure of the script tool after decompression.
 
     ```
     .
