@@ -1,10 +1,10 @@
 # Publish built-in drivers
 
-Link IoT Edge allows you to deploy built-in drivers to your gateway. This feature allows you to manage the on-premises driver files, configure the drivers on the cloud, and then deploy the drivers to the edge.
+Link IoT Edge allows you to deploy built-in drivers to your gateway. This feature allows you to manage the on-premises driver files, configure the drivers in the cloud, and then deploy the drivers to the edge.
 
-A built-in driver that complies with the driver specifications of Link IoT Edge. For more information, see [Driver development](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Develop drivers/Overview.md).
+A built-in driver that complies with the driver specifications of Link IoT Edge is provided. For more information, see [Develop drivers](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Develop drivers/Overview.md).
 
-IoT Link Edge supports the use of built-in drivers. You can upload the built-in drivers to your gateway and configure the driver information \(such as the driver name, coding language, runtime environment, and hardware architecture\) on the cloud. You can then configure the driver channel and device on the cloud.
+Link IoT Edge supports the use of built-in drivers. You can upload built-in drivers to your gateway. Then, you can configure driver information and channels, and devices in the cloud. The driver information may contain the driver name, coding language, runtime environment, and hardware architecture.
 
 ![Publish built-in drivers](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1349128851/p86374.png)
 
@@ -12,25 +12,25 @@ The following figure shows the process of publishing a built-in driver.
 
 ![The flowchart for publishing a built-in driver](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1349128851/p86617.png)
 
-## 1. Procedure on the cloud
+## 1. Procedure in the cloud
 
 1.  Log on to the [Link IoT Edge console](https://iot.console.aliyun.com/le/instance/list). In the left-side navigation pane, click **Drivers**.
 
 2.  On the Drivers page, click the Custom Drivers tab. On the Custom Drivers tab, click **Create Driver**.
 
-3.  On the **Create Driver**page, specify the parameters as prompted.
+3.  On the **Create Driver** page, set the parameters as prompted.
 
     -   Driver Information
 
-        ![Publish built-in drivers](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1349128851/p89053.png)
+        ![Publish a built-in driver](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/1349128851/p89053.png)
 
         |Parameter|Description|
         |---------|-----------|
         |Driver Name|The name of the custom driver. The name must be 1 to 20 characters in length, and can contain letters, digits, and underscores \(\_\). The name must start with a letter.|
         |Communication Protocol|The communication protocol that is used to develop the driver. Valid values: Modbus, OPCUA, and Custom.|
         |Language|The programming language that is used to develop the driver. Valid values: Node.js 8, Python 3.5, C, and Java 8. If you set the Language parameter to C, you must set the CPU Architecture parameter. |
-        |Built-in Driver|Specifies whether the driver is built-in.         -   If you select Yes, a local built-in driver is used. You do not need to upload a driver file.
-        -   If you select No, you must upload a driver file and deploy the driver to the cloud. For more information, see [Publish drivers to the cloud](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Publish drivers/Publish cloud-hosted drivers.md).
+        |Built-in Driver|Specifies whether the driver is built-in.         -   Yes: An on-premises built-in driver is used. You do not need to upload a driver file.
+        -   No: You must upload a driver file and deploy the driver in the cloud. For more information, see [Publish drivers to the cloud](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Publish drivers/Publish cloud-hosted drivers.md).
 To publish a built-in driver, you must select Yes. |
         |Driver Version|The unique version number of the driver. You cannot specify two identical version numbers for a driver.|
         |Link IoT Edge Version for the Driver|The Link IoT Edge version that supports the driver. The driver can run only in the gateways for Link IoT Edge of the specified version or later.|
@@ -73,7 +73,7 @@ To publish a built-in driver, you must select Yes. |
         |Driver Configurations|If you select **Driver Configurations**, you must complete driver configurations before you can deploy the edge instance. The driver configurations are specified after the driver is assigned to an edge instance and sub-devices are assigned to the driver.|
         |Device Configurations|If you select **Device Configurations**, you must complete device configurations before you can deploy the edge instance. The device configurations are specified after the driver is assigned to an edge instance and sub-devices are assigned to the driver.|
 
-4.  After the parameters are set, click **Confirm**. You can find the driver that has been created on the Custom Drivers tab.
+4.  After the parameters are set, click **Confirm**. The driver that you created is displayed on the Custom Drivers tab.
 
     ![Driver ID](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2349128851/p89085.png)
 
@@ -84,7 +84,7 @@ To publish a built-in driver, you must select Yes. |
 
 Link IoT Edge provides the led\_driver sample driver. For more information, visit [led\_driver source code](https://github.com/aliyun/linkedge-thing-access-sdk-c/tree/master/demo). You can use the sample driver for testing and debugging.
 
-1.  Create an edge instance and connect the edge gateway to IoT Platform. For more information, see [Set up environments](/intl.en-US/Link IoT Edge/User Guide/Set up environments/Link IoT Edge Pro Edition/Install Link IoT Edge on Ubuntu 16.04.md).
+1.  Create an edge instance and connect the edge gateway to Link IoT Edge. For more information, see [Set up environments](/intl.en-US/Link IoT Edge/User Guide/Set up environments/Link IoT Edge Pro Edition/Install Link IoT Edge on Ubuntu 16.04.md).
 
 2.  Log on to the gateway and run the following command to create a driver directory:
 
@@ -98,21 +98,21 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
     sudo -E mkdir -p /linkedge/pre-installed/{your_driver_name}/
     ```
 
-    \{your\_driver\_name\} is the name of your driver. For example, if the driver name is led\_driver, the actual command is as follows:
+    \{your\_driver\_name\} is the name of your driver. For example, if the driver name is led\_driver, the following command is used:
 
     ```
     sudo -E mkdir -p /linkedge/pre-installed/led_driver/
     ```
 
-4.  Check whether the following tools for built-in driver are installed on the gateway.
+4.  Check whether the following built-in driver tools are installed on the gateway.
 
     |Tool|Function|
     |----|--------|
-    |sed|Finds and replaces the contents of text files.|
+    |sed|Finds and replaces the content of text files.|
     |jq|Parses JSON files.|
-    |base64|Provides Base64 encryption.|
+    |base64|Provides Base64 encoding.|
 
-5.  Optional. If the gateway does not have tools such as sed, jq, or base64, you must perform the following steps to ensure that the shell script tool for the built-in driver runs normally:
+5.  Optional. If the gateway does not have tools such as sed, jq, or base64, you must perform the following steps to ensure that the shell script tool for the built-in driver runs as expected:
 
     1.  Go to the default configuration directory of Link IoT Edge.
 
@@ -122,7 +122,7 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
 
     2.  Open the config\_default.json file, and find the config parameter.
 
-    3.  Under config, add the following `key: value` pair:
+    3.  Under config, add the following key-value pair \(KVP\):``
 
         ```
         {
@@ -132,14 +132,14 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
         }
         ```
 
-        \{your\_driver\_id\} is the driver ID that you copied in the [1. Procedure on the cloud](#section_dmk_h1u_tmj) section. \{your\_driver\_path\} is the built-in driver folder path after Base64 encryption.
+        \{your\_driver\_id\} is the driver ID that you copied in the [Procedure in the cloud](#section_dmk_h1u_tmj) section of this topic. \{your\_driver\_path\} is the path of the built-in driver folder after Base64 encoding.
 
-        In the following example, the driver ID is f16f13322\*\*\*\*\*\*\*\*\*\*\*3959 cf3, the path of the built-in driver folder is /linkedge/pre-installed/led\_driver/, and the Base64-encrypted path is L2xpbmtlZGdlL3ByZS1pbnN0YWxsZWQvbGVkX2RyaXZlcg==. Then the correct `key: value` pair is as follows:
+        Assume that the driver ID is f16f13322\*\*\*\*\*\*\*\*\*\*\*3959cf3 and the path of the built-in driver folder is /linkedge/pre-installed/led\_driver/. In this case, the Base64-encoded path is L2xpbmtlZGdlL3ByZS1pbnN0YWxsZWQvbGVkX2RyaXZlcg==. Then, the following KVP is added:``
 
         ```
         {
             "config": {
-                "gw_drivercode_f16f133222************3959cf3": "L2xpbmtlZGdlL3ByZS1pbnN0YWxsZWQvbGVkX2RyaXZlcg==",
+                "gw_drivercode_f16f13322**********3959cf3": "L2xpbmtlZGdlL3ByZS1pbnN0YWxsZWQvbGVkX2RyaXZlcg==",
             }
         }
         ```
@@ -150,10 +150,10 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
 
     ```
     .
-    └-- led_driver
-        |-- pre-installed.sh
-        |-- lib
-        └-- main
+    └── led_driver
+        |—— pre-installed.sh
+        |—— lib
+        └── main
     ```
 
 7.  Go to the directory where the built-in driver is located and run the shell script tool.
@@ -163,9 +163,9 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
     sudo -E ./pre-installed.sh {your_driver_id} --default
     ```
 
-    \{your\_driver\_name\} is the driver name and \{your\_driver\_id\} is the driver ID that you saved in the [1. Procedure on the cloud](#section_dmk_h1u_tmj) section.
+    \{your\_driver\_name\} is the driver name and \{your\_driver\_id\} is the driver ID that you saved in the [Procedure in the cloud](#section_dmk_h1u_tmj) section of this topic.
 
-    For example, if the driver name is led\_driver and the driver ID is f16f13322\*\*\*\*\*\*\*\*\*\*\*3959 cf3, the actual command is as follows:
+    For example, the driver name is led\_driver and the driver ID is f16f13322\*\*\*\*\*\*\*\*\*\*\*3959cf3. In this case, the following command is run:
 
     ```
     cd /linkedge/pre-installed/led_driver/
@@ -177,25 +177,31 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
 
 ## FAQ
 
-Q: Why does my devices not come online after I run the shell script?
+Q: Why do my devices not come online after I run the shell script?
 
-A: You must finish the driver configuration on the cloud and deploy the driver to the gateway before the associated sub-devices can come online.
+A: You must complete the driver configuration in the cloud and deploy the driver to the gateway before the associated sub-devices can come online.
 
-1.  Log on to the [IoT Platform console](https://iot.console.aliyun.com/). In the left-side navigation pane, choose **Link IoT Edge** \> **Drivers**.
-2.  On the Custom Drivers tab of the **Drivers** page, click **Version Management** in the Actions column.
+## Related operations
+
+1.  Log on to the [Link IoT Edge console](https://iot.console.aliyun.com/le/instance/list).
+
+2.  In the left-side navigation pane, click **Drivers**.
+
+3.  On the **Custom Drivers** tab of the Drivers page, click **Version Management** in the Actions column.
 
     ![Driver version management](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/en-US/2495328851/p76055.png)
 
-3.  On the **Version Management** page, you can manage the driver versions. The following table lists the available operations.
+4.  In the **Version Management** panel, you can manage the driver versions. The following table describes the available operations.
 
     |Operation|Description|
     |---------|-----------|
-    |Create Version|You can click **Create Version** to create a new version of the driver. For parameter configurations, see the [1. Procedure on the cloud](#section_dmk_h1u_tmj) section of in this topic.|
-    |Publish|You can click **Publish** to publish the specified version. In the **Publish Driver** dialog box, confirm the driver information, and click **Publish**. **Note:** After the version of the driver is published, you cannot Delete the version of the driver. You can only View the version details or Download the version of the driver. |
-    |Edit|You can edit the driver configurations only when the driver version is in the Unpublished state. Click **Edit** to edit the driver configurations. For more information, see the [1. Procedure on the cloud](#section_dmk_h1u_tmj) section of this topic.|
+    |Create Version|You can click **Create Version** to create a version of the driver. For more information about the configurations and parameters, see the [Procedure in the cloud](#section_dmk_h1u_tmj) section of this topic.|
+    |Publish|You can click **Publish** to publish the specified version. In the **Publish Driver** dialog box, confirm the driver information and click **Publish**. **Note:** After the version of the driver is published, you cannot delete the version of the driver. You can only view the version details or download the version of the driver. |
+    |Edit|You can edit the driver configurations only when the driver version is in the Unpublished state. Click **Edit** to edit the driver configurations. For more information about the parameters, see the [Procedure in the cloud](#section_dmk_h1u_tmj) section of this topic.|
     |Download|You can click **Download** to download the specified version of the driver.|
-    |Delete|You can delete a driver version only when the driver version is in the Unpublished state. You can click **Delete** to delete the specified version of the driver.|
-    |View|You can view the driver version details only when the driver version is in the Published state. Click **View** to view the driver version details or modify the configurations of the driver version. For more information, see the [1. Procedure on the cloud](#section_dmk_h1u_tmj) section of this topic.|
+    |Delete|You can delete a driver version only when the driver version is in the Unpublished state. Click **Delete** to delete the specified version of the driver.|
+    |View|You can view the driver version details only when the driver version is in the Published state. Click **View** to view the driver version details, or modify the configurations of the driver version. For more information, see the [Procedure in the cloud](#section_dmk_h1u_tmj) section of this topic.|
 
-4.  After you publish the driver on the cloud, you can assign the driver to an edge instance and assign sub-devices to the driver. Then, you can deploy the driver and its sub-devices to the edge by deploying the edge instance. For more information, see [Debug drivers](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Develop drivers/Debug drivers.md).
+5.  After you publish the driver in the cloud, you can assign the driver to an edge instance and assign sub-devices to the driver. Then, you can deploy the driver and its sub-devices to the edge by deploying the edge instance. For more information, see [Debug drivers](/intl.en-US/Link IoT Edge/User Guide/Connect devices to Link IoT Edge/Develop drivers/Debug drivers.md).
+
 
