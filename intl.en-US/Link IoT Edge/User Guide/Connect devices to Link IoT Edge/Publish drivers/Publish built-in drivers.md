@@ -151,8 +151,8 @@ Link IoT Edge provides the led\_driver sample driver. For more information, visi
     ```
     .
     └── led_driver
-        |—— pre-installed.sh
-        |—— lib
+        |-- pre-installed.sh
+        |-- lib
         └── main
     ```
 
