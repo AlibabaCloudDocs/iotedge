@@ -32,11 +32,11 @@ http://Endpoint/?Action=xx&Parameters
 https://iot.cn-shanghai.aliyuncs.com/?Action=Pub
 &Format=XML
 &Version=2018-01-20
-&Signature=Pc5WB8gokVn0xfeu%2FZV%2BiNM1dgI%3D
+&Signature=Pc5WB8gok***1dgI%3D
 &SignatureMethod=HMAC-SHA1
 &SignatureNonce=15215528852396
 &SignatureVersion=1.0
-&AccessKeyId=...
+&AccessKeyId=LTAI4***iW5j3
 &Timestamp=2017-07-19T12:00:00Z
 &RegionId=cn-shanghai
 ...
@@ -46,7 +46,7 @@ https://iot.cn-shanghai.aliyuncs.com/?Action=Pub
 https://POP网关域名/data/api.json/?Action=Pub
 &Format=XML
 &Version=2017-04-20
-&Signature=Pc5WB8gokVn0xfeu%2FZV%2BiNM1dgI%3D
+&Signature=Pc5WB8gok***1dgI%3D
 &SignatureMethod=HMAC-SHA1
 &SignatureNonce=15215528852396
 &SignatureVersion=1.0
@@ -56,7 +56,7 @@ https://POP网关域名/data/api.json/?Action=Pub
 
 ## API在线调试
 
-阿里云OpenAPI开发者门户提供[API在线调试工具](https://next.api.aliyun.com/api/Iot)。在**API调试**页面，您可以快速检索和体验调用API。系统会根据您输入的参数同步生成各语言SDK的代码示例。各语言SDK代码示例显示在页面右侧**SDK示例**页签下供您参考。在**调用结果**页签下，查看API调用的真实请求URL和JSON格式的返回结果。
+阿里云OpenAPI开发者门户提供[API在线调试工具](https://next.api.aliyun.com/api/Iot)。在**API调试**页面，您可以快速检索和体验调用API。系统会根据您输入的参数同步生成各语言SDK的代码示例。各语言SDK代码示例显示在页面右侧**SDK示例**页签下供您参考。在**调用结果**页签下，可查看API调用的真实请求URL和JSON格式的返回结果。
 
 ![物联网平台API](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/1135915161/p40697.png)
 
