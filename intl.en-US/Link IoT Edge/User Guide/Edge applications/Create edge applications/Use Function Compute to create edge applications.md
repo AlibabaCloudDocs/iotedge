@@ -45,8 +45,6 @@ In this example, set this parameter to Function Compute. |
 
     -   Container Configurations
 
-        **Note:**
-
         |Parameter|Description|
         |---------|-----------|
         |Host Mode|Specifies whether to isolate the container network from the host network. Valid values:         -   Yes: The container network is the same as the host network.
